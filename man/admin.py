@@ -3,6 +3,8 @@
 from django.contrib import admin
 from man.models import Man2
 from django import forms
+from django.contrib.auth.models import User
+
 
 class Man2Form(forms.ModelForm):
     name = forms.CharField(label=u'Имя')
@@ -47,7 +49,6 @@ class Man2Admin(admin.ModelAdmin):
         displayField('forward_count', u'Кол-во впереди идущих'),
         displayField('back_count', u'Кол-во сзади идущих')
     )
-    # fields = ('name', 'forward_mans', 'back_mans')
     form = Man2Form
 
 

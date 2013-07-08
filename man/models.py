@@ -26,4 +26,5 @@ class Man2(models.Model):
     class Meta:
         verbose_name = u'Человек'
         verbose_name_plural = u'Люди'
+        ordering = ['id',]
 
